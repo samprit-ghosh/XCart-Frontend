@@ -5,17 +5,17 @@ import { useNavigate } from 'react-router-dom';
 function LoginForm({ onClose = () => {} }) {
     const navigate = useNavigate();
 
-    const handleLogin = (event) => {
-        event.preventDefault();
+    // const handleLogin = (event) => {
+    //     event.preventDefault();
 
-        const data = new FormData(event.currentTarget);
-        const usersData = {
-            email: data.get("email"),
-            password: data.get("password"),
-        };
+    //     const data = new FormData(event.currentTarget);
+    //     const usersData = {
+    //         email: data.get("email"),
+    //         password: data.get("password"),
+    //     };
 
-        console.log(`Email: ${usersData.email}\nPassword: ${usersData.password}`);
-    };
+    //     console.log(`Email: ${usersData.email}\nPassword: ${usersData.password}`);
+    // };
 
     const handleClose = (event) => {
         event.preventDefault();

@@ -19,5 +19,4 @@ export default defineConfig({
 });
 
 
-// XCart-Frontend
-// 
+// x-cart-frontend

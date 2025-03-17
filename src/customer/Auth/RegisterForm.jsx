@@ -8,31 +8,31 @@ import CloseIcon from '@mui/icons-material/Close';
 
 function RegisterForm({ onClose = () => {} }) {
     const navigate = useNavigate();
-    const dispatch = useDispatch();
-    const jwt = localStorage.getItem("jwt");
-    const { auth } = useSelector(store => store);
+    // const dispatch = useDispatch();
+    // const jwt = localStorage.getItem("jwt");
+    // const { auth } = useSelector(store => store);
 
-    useEffect(() => {
-        if (jwt) {
-            dispatch(getUser(jwt));
-        }
-    }, [jwt, auth.jwt, dispatch]);
+    // useEffect(() => {
+    //     if (jwt) {
+    //         dispatch(getUser(jwt));
+    //     }
+    // }, [jwt, auth.jwt, dispatch]);
 
-    const formRegister = (event) => {
-        event.preventDefault(); // Prevent default form submission
+    // const formRegister = (event) => {
+    //     event.preventDefault(); // Prevent default form submission
 
-        const data = new FormData(event.currentTarget);
-        const usersData = {
-            firstName: data.get("firstName"),
-            lastName: data.get("lastName"),
-            email: data.get("email"),
-            password: data.get("password"),
-        };
+    //     const data = new FormData(event.currentTarget);
+    //     const usersData = {
+    //         firstName: data.get("firstName"),
+    //         lastName: data.get("lastName"),
+    //         email: data.get("email"),
+    //         password: data.get("password"),
+    //     };
 
-        dispatch(register(usersData));
+    //     dispatch(register(usersData));
 
-        console.log(`${usersData.firstName} ${usersData.lastName}\n${usersData.email}\n${usersData.password}`);
-    };
+    //     console.log(`${usersData.firstName} ${usersData.lastName}\n${usersData.email}\n${usersData.password}`);
+    // };
 
     const handleClose = (event) => {
         event.preventDefault(); // Prevent default form submission
